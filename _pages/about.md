@@ -11,13 +11,13 @@ redirect_from:
 <!-- I am currently spending a gap year doing research and internships before starting the M.S. in Computer Science and Engineering at the University of Michigan, Ann Arbor (Fall 2025). -->
 <!-- Previously, I worked as a Research Assistant at UNC-Chapel Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io/). Before that, I conducted research at Tsinghua University under the supervision of [Prof. Longbo Huang](https://people.iiis.tsinghua.edu.cn/~huang/). -->
 
-I am a first-year M.S. student in Computer Science and Engineering at the University of Michigan, Ann Arbor.
+I am a first-year M.S. student in Computer Science and Engineering at the [University of Michigan](https://umich.edu/), Ann Arbor, where I am fortunate to be advised by [Prof. Joyce Y. Chai](https://web.eecs.umich.edu/~chaijy/).
 
 Previously, I conducted research under [Prof. Yongchao Chen](https://yongchao98.github.io/YongchaoChen/) and [Prof. Lichao Sun](https://lichao-sun.github.io/). Before that, I worked as a research assistant at [UNC-Chapel Hill](https://www.unc.edu/), advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io/). I am also extremely grateful to [Prof. Longbo Huang](https://people.iiis.tsinghua.edu.cn/~huang/) for guiding my early research at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/#page3).
 
 
 My research interests include:
-1. Robot Learning & Embodied AI: Vision-Language-Action (VLA) models, World Models, and generative policies (e.g., diffusion and flow policies).
+1. Robot Learning & Embodied AI: Generative policies (e.g., diffusion and flow policies), Vision-Language-Action (VLA) models, and World Models.
 2. Computational efficiency and mathematical reasoning in LLMs.
 3. Multi-Agent Reinforcement Learning.
 

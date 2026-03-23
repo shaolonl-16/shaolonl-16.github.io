@@ -30,7 +30,7 @@ I'm always open to discussing other research topics. If you're interested in cha
 - *Sep, 2024.* [**A Sparse Training Framework for Multi-Agent Reinforcement Learning**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!
 - *Jun, 2024.* Graduated from Central South University with honor: awarded **Outstanding Graduate**.
 - *Oct, 2023.* Awarded **"Ruiwei" Scholarship** by CSU!
-- *Jul, 2023.* Visiting [**Prof. Longbo Huang**](https://people.iiis.tsinghua.edu.cn/~huang/) **@ IIIS, Tsinghua**!
+- *Jul, 2023.* Visited [**Prof. Longbo Huang**](https://people.iiis.tsinghua.edu.cn/~huang/) **@ IIIS, Tsinghua**!
 - *Nov, 2022.* Awarded **"Yihao Foodstuff" Scholarship** by CSU!
 - *Dec, 2021.* Awarded **National Scholarship** by Ministry of Education!
 - *Nov, 2021.* Awarded **First Class Scholarship** by CSU!

@@ -24,7 +24,7 @@ My research interests include:
 I'm always open to discussing other research topics. If you're interested in chatting, please feel free to reach out!
 
 ## Recent News
-- *Aug, 2025.* Joined UMich as an M.S. student in CSE.
+- *Aug, 2025.* Joined UMich as an M.S. student in CSE!
 - *Mar, 2025.* [**Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining**](https://arxiv.org/abs/2408.11746) accepted to **TMLR**!
 - *Sep, 2024.* Research Intern with [**Prof. Huaxiu Yao**](https://www.huaxiuyao.io/) **@ UNC-Chapel Hill**!
 - *Sep, 2024.* [**A Sparse Training Framework for Multi-Agent Reinforcement Learning**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!

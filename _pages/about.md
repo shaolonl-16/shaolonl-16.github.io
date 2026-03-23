@@ -17,16 +17,17 @@ Previously, I conducted research under [Prof. Yongchao Chen](https://yongchao98.
 
 
 My research interests include:
-1. Robot Learning & Embodied AI: Generative policies (e.g., diffusion and flow policies), Vision-Language-Action (VLA) models, and World Models.
-2. Computational efficiency and mathematical reasoning in LLMs.
+1. Embodied AI & Robot Learning: generative policies (e.g., diffusion and flow policies), 3D perception, embodied memory, Vision-Language-Action (VLA) models, and world models.
+2. Large Language Models: computational efficiency and mathematical reasoning.
 3. Multi-Agent Reinforcement Learning.
 
 I'm always open to discussing other research topics. If you're interested in chatting, please feel free to reach out!
 
 ## Recent News
-- *Mar, 2025* [**Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining**](https://arxiv.org/abs/2408.11746) accepted by **TMLR**!
-- *Sept, 2024.* Research Intern with [**Prof. Huaxiu Yao**](https://www.huaxiuyao.io/) **@ UNC-Chapel Hill**!
-- *Sept, 2024* [**A Sparse Training Framework for Multi-Agent Reinforcement Learning**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!
+- *Aug, 2025.* Joined UMich as an M.S. student in CSE.
+- *Mar, 2025.* [**Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining**](https://arxiv.org/abs/2408.11746) accepted to **TMLR**!
+- *Sep, 2024.* Research Intern with [**Prof. Huaxiu Yao**](https://www.huaxiuyao.io/) **@ UNC-Chapel Hill**!
+- *Sep, 2024.* [**A Sparse Training Framework for Multi-Agent Reinforcement Learning**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!
 - *Jun, 2024.* Graduated from Central South University with honor: awarded **Outstanding Graduate**.
 - *Oct, 2023.* Awarded **"Ruiwei" Scholarship** by CSU!
 - *Jul, 2023.* Visiting [**Prof. Longbo Huang**](https://people.iiis.tsinghua.edu.cn/~huang/) **@ IIIS, Tsinghua**!

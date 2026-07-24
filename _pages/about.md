@@ -17,13 +17,14 @@ Previously, I conducted research under [Prof. Yongchao Chen](https://yongchao98.
 
 
 My research interests include:
-1. Embodied AI & Robot Learning: generative policies (e.g., diffusion and flow policies), 3D perception, embodied memory, Vision-Language-Action (VLA) models, and world models.
+1. Embodied AI & Robot Learning: World Action Models (WAM), Vision-Language-Action (VLA) models, generative policies (e.g., diffusion and flow policies), embodied memory, and 3D perception.
 2. Large Language Models: computational efficiency and mathematical reasoning.
 3. Multi-Agent Reinforcement Learning.
 
 I'm always open to discussing other research topics. If you're interested in chatting, please feel free to reach out!
 
 ## Recent News
+- *Jun, 2026.* [**One-Step Flow Policy: Self-Distillation for Fast Visuomotor Policies**](https://arxiv.org/abs/2603.12480) accepted to **ECCV 2026**!
 - *Aug, 2025.* Joined **UMich** as an M.S. student in CSE!
 - *Mar, 2025.* [**Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining**](https://arxiv.org/abs/2408.11746) accepted to **TMLR**!
 - *Sep, 2024.* Research Intern with [**Prof. Huaxiu Yao**](https://www.huaxiuyao.io/) **@ UNC-Chapel Hill**!

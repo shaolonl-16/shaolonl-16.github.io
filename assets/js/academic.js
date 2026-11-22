@@ -56,7 +56,10 @@
     img.alt = link.querySelector("img").alt;
     dialog.querySelector(".media-caption").textContent = link.dataset.caption || img.alt;
     dialog.querySelector(".media-count").textContent = `${index + 1} / ${group.length}`;
-    dialog.querySelector(".media-original").href = link.href;
+    const original = dialog.querySelector(".media-original");
+    original.hidden = link.dataset.lightbox === "publications";
+    if (original.hidden) original.removeAttribute("href");
+    else original.href = link.href;
   };
 
   // Leave modified clicks available for opening the original in a separate tab.

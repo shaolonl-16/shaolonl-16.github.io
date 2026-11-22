@@ -1,10 +1,14 @@
 # Source: CV_Shaolong.pdf, Education and Research Experience.
+# Research rows are newest first. education_id places a degree beside research
+# from the same period, so both columns share a chronological layout.
 education:
-  - institution: University of Michigan
+  - id: umich
+    institution: University of Michigan
     degree: M.S. in Computer Science and Engineering
     dates: Aug. 2025 – May 2027 (expected)
     location: Ann Arbor, MI
-  - institution: Central South University
+  - id: csu
+    institution: Central South University
     degree: B.S. in Computer Science and Technology
     dates: Sep. 2020 – Jun. 2024
     location: Changsha, China
@@ -12,6 +16,7 @@ education:
 
 research:
   - institution: University of Michigan, SLED Lab
+    education_id: umich
     dates: Mar. 2026 – Present
     location: Ann Arbor, MI
     role: Research Assistant
@@ -30,6 +35,7 @@ research:
     advisors: "[Huaxiu Yao](https://www.huaxiuyao.io/)"
     summary: "Studied **step-level preference optimization** for mathematical reasoning in large language models."
   - institution: Tsinghua University, IIIS
+    education_id: csu
     dates: Jul. 2023 – Jun. 2024
     location: Beijing, China
     role: Research Assistant

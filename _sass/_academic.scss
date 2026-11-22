@@ -228,32 +228,34 @@ strong { font-weight: 600; }
   .news-item:first-child::before { background: var(--academic-accent); border-color: var(--academic-accent); }
 }
 
-.experience-grid { display: grid; grid-template-columns: 0.9fr 1.6fr; gap: 30px; }
+.experience-headings, .experience-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+  column-gap: 30px;
+}
 .education-column { text-align: right; padding-right: 5px; }
-.research-column { border-left: 1px solid var(--academic-rule); padding-left: 28px; }
-.academic-site .column-label {
+.research-column { grid-column: 2; border-left: 1px solid var(--academic-rule); padding-left: 28px; }
+.academic-site .column-label, .experience-kind {
   font: 600 0.73rem/1.5 var(--academic-sans);
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--academic-muted);
   margin: 0 0 24px;
 }
+.experience-kind { display: none; }
 .education-entry, .experience-entry {
   position: relative;
-  margin: 0 0 30px;
+  margin: 0;
   h4 { font: 600 1.05rem/1.4 var(--academic-sans); margin: 5px 0 7px; }
   p { margin: 0 0 7px !important; }
   .experience-date { font-size: 0.81rem; color: var(--academic-muted); font-variant-numeric: tabular-nums; }
   .experience-role, .experience-location { font-size: 0.82rem; color: var(--academic-muted); }
   .degree { font-size: 0.94rem; line-height: 1.55; }
 }
-.education-entry + .education-entry { padding-top: 25px; border-top: 1px solid var(--academic-rule); }
 .education-detail { margin-top: 12px; font-size: 0.8rem; color: var(--academic-muted); }
 .experience-entry {
   padding-bottom: 23px;
   border-bottom: 1px solid var(--academic-rule);
-  margin-bottom: 23px;
-  &:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
   &::before {
     content: "";
     position: absolute;
@@ -266,6 +268,11 @@ strong { font-weight: 600; }
     background: #fff;
   }
 }
+.experience-row + .experience-row {
+  .education-entry, .experience-entry { padding-top: 23px; }
+  .experience-entry::before { top: 29px; }
+}
+.experience-row:last-child .experience-entry { padding-bottom: 0; border-bottom: 0; }
 .experience-summary { font-size: 0.92rem; line-height: 1.6; margin-top: 12px; }
 .experience-advisors { font-size: 0.84rem; color: var(--academic-muted); }
 
@@ -288,11 +295,23 @@ strong { font-weight: 600; }
 .publication-figure {
   display: block;
   margin: 22px 0 0;
-  .overview-link { position: relative; display: block; padding: 17px; border: 1px solid var(--academic-rule); border-radius: 5px; background: #fff; cursor: zoom-in; }
-  img { display: block; width: 100%; height: auto; margin: 0; border-radius: 0; }
+  // A shared canvas keeps tall diagrams from dominating the publication list.
+  .overview-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 3.2 / 1;
+    padding: 17px;
+    border: 1px solid var(--academic-rule);
+    border-radius: 5px;
+    background: #fff;
+    cursor: zoom-in;
+  }
+  img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: contain; margin: 0; border-radius: 0; }
   .overview-link:hover { border-color: #a2bdb1; }
-  figcaption { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 8px 0 0; font: 400 0.75rem/1.5 var(--academic-sans); color: var(--academic-muted); }
-  figcaption a { text-decoration: none; }
+  figcaption { margin: 8px 0 0; font: 400 0.75rem/1.5 var(--academic-sans); color: var(--academic-muted); }
 }
 .image-zoom { position: absolute; bottom: 8px; right: 8px; width: 26px; height: 26px; text-align: center; line-height: 26px; background: #f0f5f1; color: var(--academic-accent); border-radius: 50%; font-size: 16px; }
 
@@ -387,11 +406,14 @@ body.media-open { overflow: hidden; }
     time { font-size: 0.78rem; }
     .news-copy { padding-left: 16px; font-size: 0.92rem; }
   }
-  .experience-grid { display: block; }
-  .education-column { text-align: left; padding: 0 0 10px; }
-  .education-entry + .education-entry { padding-top: 0; border-top: 0; }
+  .experience-headings { display: none; }
+  .experience-row { display: block; }
+  .experience-kind { display: block; margin-bottom: 12px; }
+  .education-column { text-align: left; padding: 0 0 24px 22px; border-left: 1px solid var(--academic-rule); }
   .research-column { padding-left: 22px; }
   .experience-entry::before { left: -27px; }
+  .experience-row + .experience-row .education-column + .research-column .experience-entry { padding-top: 0; }
+  .experience-row + .experience-row .education-column + .research-column .experience-entry::before { top: 6px; }
   .publication .publication-title { font-size: 1.16rem; }
   .publication-figure .overview-link { padding: 10px; }
   .photo-gallery { column-gap: 10px; }

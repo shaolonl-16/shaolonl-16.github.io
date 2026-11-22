@@ -13,9 +13,11 @@ The site keeps the existing AcademicPages/Jekyll structure and works with GitHub
 
 The current experience entries come from `CV_Shaolong.pdf`. The existing biography, research interests, news, publication information, and hobby paragraphs have been retained, with formatting changes. MotionMEM has no paper URL in the original page, so its title is plain text until a URL is supplied.
 
+Experience uses shared rows in reverse chronological order. Each research entry can reference an education `id` through `education_id`, placing that degree beside research from the same period. CSU is paired with the 2023–2024 Tsinghua experience, below UNC. The same row order is retained on mobile.
+
 ## Images
 
-Original overviews remain in `overview_figs/`, and original photographs remain in `photos/`. The site uses compressed WebP previews for PDFs and photos. The MotionMEM overview remains SVG. Clicking an image opens a viewer with previous/next controls, arrow-key navigation, Escape to close, and a link to the original file.
+Original overviews remain in `overview_figs/`, and original photographs remain in `photos/`. The site uses compressed WebP previews for PDFs and photos. The MotionMEM overview remains SVG. Publication previews share a 3.2:1 frame and use `object-fit: contain` to preserve the full diagram without stretching or cropping. Clicking an image opens a viewer with previous/next controls, arrow-key navigation, and Escape to close. Only the photo viewer shows a link to the original file.
 
 To add a photo, place its JPG in `photos/`, add its filename and description to `_data/photos.yml`, then regenerate previews. To replace a paper figure, keep its filename or update the mapping in `_data/selected_publications.yml`.
 

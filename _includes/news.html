@@ -1,0 +1,16 @@
+<section class="news-section" aria-labelledby="recent-news">
+  <div class="section-heading">
+    <h2 id="recent-news">Recent News</h2>
+    <span class="scroll-hint" id="news-hint">Scroll for earlier updates <span aria-hidden="true">↓</span></span>
+  </div>
+  <div class="news-scroll" tabindex="0" role="region" aria-label="Recent news timeline" aria-describedby="news-hint" data-visible-items="4">
+    <ol class="news-timeline">
+      {% for item in site.data.news %}
+      <li class="news-item">
+        <time datetime="{{ item.date }}">{{ item.label }}</time>
+        <div class="news-copy">{{ item.text | markdownify }}</div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+# Source: CV_Shaolong.pdf, Education and Research Experience.
+education:
+  - institution: University of Michigan
+    degree: M.S. in Computer Science and Engineering
+    dates: Aug. 2025 – May 2027 (expected)
+    location: Ann Arbor, MI
+  - institution: Central South University
+    degree: B.S. in Computer Science and Technology
+    dates: Sep. 2020 – Jun. 2024
+    location: Changsha, China
+    detail: "Overall GPA: **93.76/100** · Rank: **2/235**"
+
+research:
+  - institution: University of Michigan, SLED Lab
+    dates: Mar. 2026 – Present
+    location: Ann Arbor, MI
+    role: Research Assistant
+    advisors: "[Joyce Y. Chai](https://web.eecs.umich.edu/~chaijy/)"
+    summary: "Developed **LeanWAM** and **MotionMEM** to learn compact predictive representations and motion memory for robot policies."
+  - institution: Tsinghua University & Lehigh University
+    dates: Jun. 2025 – Feb. 2026
+    location: Remote
+    role: Research Assistant
+    advisors: "[Yongchao Chen](https://yongchao98.github.io/YongchaoChen/) and [Lichao Sun](https://lichao-sun.github.io/)"
+    summary: "Developed **One-Step Flow Policy**, using self-distillation for fast, one-step visuomotor control."
+  - institution: University of North Carolina at Chapel Hill
+    dates: Sep. 2024 – Dec. 2024
+    location: Remote
+    role: Research Assistant
+    advisors: "[Huaxiu Yao](https://www.huaxiuyao.io/)"
+    summary: "Studied **step-level preference optimization** for mathematical reasoning in large language models."
+  - institution: Tsinghua University, IIIS
+    dates: Jul. 2023 – Jun. 2024
+    location: Beijing, China
+    role: Research Assistant
+    advisors: "[Longbo Huang](https://people.iiis.tsinghua.edu.cn/~huang/)"
+    summary: "Developed **sparse training methods** for efficient Transformer pretraining and multi-agent reinforcement learning."

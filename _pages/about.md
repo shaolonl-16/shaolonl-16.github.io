@@ -3,6 +3,7 @@ permalink: /
 title: "About Me"
 excerpt: "About Me"
 author_profile: true
+body_class: academic-site
 redirect_from: 
   - /about/
   - /about.html
@@ -17,21 +18,16 @@ Previously, I conducted research under [Prof. Yongchao Chen](https://yongchao98.
 
 
 My research interests include:
-1. Embodied AI & Robot Learning: World Action Models (WAM), Vision-Language-Action (VLA) models, agentic robotics, generative policies (e.g., diffusion and flow policies), embodied memory, and 3D perception.
-2. Large Language Models: computational efficiency and mathematical reasoning.
-3. Multi-Agent Reinforcement Learning.
+<div class="research-interests-wrapper" markdown="1">
+
+1. **Embodied AI & Robot Learning:** World Action Models (WAM), Vision-Language-Action (VLA) models, agentic robotics, generative policies (e.g., diffusion and flow policies), embodied memory, and 3D perception.
+2. **Large Language Models:** computational efficiency and mathematical reasoning.
+3. **Multi-Agent Reinforcement Learning.**
+
+</div>
 
 I'm always open to discussing other research topics. If you're interested in chatting, please feel free to reach out!
 
-## Recent News
-- *Nov, 2026.* New preprint [**LeanWAM**](https://shaolonl-16.github.io/leanwam/assets/paper/LeanWAM.pdf) is out, a lightweight world action model that learns from a frozen video model for fast and robust robot control.
-- *Jun, 2026.* [**One-Step Flow Policy: Self-Distillation for Fast Visuomotor Policies**](https://arxiv.org/abs/2603.12480) accepted to **ECCV 2026**!
-- *Aug, 2025.* Joined **UMich** as an M.S. student in CSE!
-- *Mar, 2025.* [**Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining**](https://arxiv.org/abs/2408.11746) accepted to **TMLR**!
-- *Sep, 2024.* [**A Sparse Training Framework for Multi-Agent Reinforcement Learning**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!
-- *Jun, 2024.* Graduated from Central South University with honor: awarded **Outstanding Graduate**.
-- *Oct, 2023.* Awarded **"Ruiwei" Scholarship** by CSU!
-- *Jul, 2023.* Visited [**Prof. Longbo Huang**](https://people.iiis.tsinghua.edu.cn/~huang/) **@ IIIS, Tsinghua**!
-- *Nov, 2022.* Awarded **"Yihao Foodstuff" Scholarship** by CSU!
-- *Dec, 2021.* Awarded **National Scholarship** by Ministry of Education!
-- *Nov, 2021.* Awarded **First Class Scholarship** by CSU!
+{% include news.html %}
+
+{% include experience.html %}

@@ -146,6 +146,8 @@ exclude:
   - gulpfile.js
   - log
   - node_modules
+  - scripts
+  - WEBSITE_EDITING.md
   - package.json
   - tmp
   - vendor

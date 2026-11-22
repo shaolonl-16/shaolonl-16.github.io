@@ -1,0 +1,22 @@
+<article class="publication" id="{{ include.paper.id }}">
+  <div class="publication-topline">
+    <span class="publication-number" aria-hidden="true">{{ include.index | prepend: '0' }}</span>
+    <span class="venue-label{% if include.paper.label == 'Preprint' %} venue-label--preprint{% endif %}">{{ include.paper.label }}</span>
+  </div>
+  <h2 class="publication-title">
+    {% if include.paper.url %}<a href="{{ include.paper.url }}">{{ include.paper.title }}</a>{% else %}{{ include.paper.title }}{% endif %}
+  </h2>
+  <div class="publication-authors">{{ include.paper.authors | markdownify }}</div>
+  <div class="publication-venue">{{ include.paper.venue | markdownify }}</div>
+  <figure class="publication-figure">
+    <a class="overview-link" href="{{ include.paper.original | relative_url }}" data-lightbox="publications" data-image="{{ include.paper.figure | relative_url }}" data-caption="{{ include.paper.title | escape }}" aria-label="Enlarge overview for {{ include.paper.title | escape }}">
+      {% assign dimensions = site.data.media_dimensions.overviews[include.paper.id] %}
+      <img src="{{ include.paper.figure | relative_url }}" alt="{{ include.paper.alt | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy" decoding="async">
+      <span class="image-zoom" aria-hidden="true">↗</span>
+    </a>
+    <figcaption>
+      <span>Method overview</span>
+      <a href="{{ include.paper.original | relative_url }}" target="_blank" rel="noopener">View original <span aria-hidden="true">↗</span></a>
+    </figcaption>
+  </figure>
+</article>

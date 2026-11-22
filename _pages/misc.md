@@ -3,6 +3,7 @@ layout: archive
 title: "Miscellaneous"
 permalink: /misc/
 author_profile: true
+body_class: academic-site
 redirect_from:
   - /misc
 ---
@@ -15,6 +16,12 @@ In particular, I am a faithful fan of badminton, and my favorite athlete is Lin 
 
 I have a variety of interests, including sports, cooking, movies, and traveling. 
 
-Badminton: I am an avid badminton player and a huge fan of Lin Dan. I played for my college team, maintain a weekly training routine, and enjoy collecting professional rackets. If you are ever in the area, I am always down for a match! 
+**Badminton:** I am an avid badminton player and a huge fan of Lin Dan. I played for my college team, maintain a weekly training routine, and enjoy collecting professional rackets. If you are ever in the area, I am always down for a match!
 
-Cooking: I am an enthusiastic home cook specializing in spicy Hunan and Sichuan cuisines!
+**Cooking:** I am an enthusiastic home cook specializing in spicy Hunan and Sichuan cuisines!
+
+## Photos
+
+<p class="photo-intro">I also enjoy photography, capturing landscapes and small moments from everyday life and travel.</p>
+
+{% include photo-gallery.html %}

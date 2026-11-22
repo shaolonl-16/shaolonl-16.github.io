@@ -1,0 +1,49 @@
+# Keep titles, authors and venues in sync with _pages/publications.md / the CV.
+- id: leanwam
+  title: "LeanWAM: Learning Latent World Action Models from Frozen Video Models"
+  url: https://shaolonl-16.github.io/leanwam/assets/paper/LeanWAM.pdf
+  authors: '**Shaolong Li\***, Hongze Fu\*, Yinpei Dai, and Joyce Chai'
+  venue: "*Preprint*."
+  label: Preprint
+  figure: /assets/images/overviews/leanwam.webp
+  original: /overview_figs/leanwam.pdf
+  alt: "LeanWAM overview: a two-stage framework learns predictive codes from a frozen video model and distills them into a lightweight action policy."
+
+- id: motionmem
+  title: "MotionMEM: Self-Supervised Motion Tokens as Memory for Vision-Language-Action Policies"
+  authors: 'Hongze Fu\*, **Shaolong Li\***, Byeongju Woo, Yinpei Dai, Yunhao Luo, Joyce Chai, and Nima Fazeli'
+  venue: "*Preprint*."
+  label: Preprint
+  figure: /overview_figs/motionmem.svg
+  original: /overview_figs/motionmem.svg
+  alt: "MotionMEM overview: self-supervised motion tokens provide a compact memory for vision-language-action policies."
+
+- id: ofp
+  title: "One-Step Flow Policy: Self-Distillation for Fast Visuomotor Policies"
+  url: https://arxiv.org/abs/2603.12480
+  authors: '**Shaolong Li**, Lichao Sun, and Yongchao Chen'
+  venue: "*European Conference on Computer Vision* (*ECCV*), 2026."
+  label: ECCV 2026
+  figure: /assets/images/overviews/ofp.webp
+  original: /overview_figs/ofp.pdf
+  alt: "One-Step Flow Policy overview showing self-consistency training and self-guided training for one-step action generation."
+
+- id: mst
+  title: "Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining"
+  url: https://arxiv.org/abs/2408.11746
+  authors: 'Pihe Hu\*, **Shaolong Li\***, Xun Wang, and Longbo Huang'
+  venue: "*Transactions on Machine Learning Research (TMLR)*."
+  label: TMLR
+  figure: /assets/images/overviews/mst.webp
+  original: /overview_figs/mst.pdf
+  alt: "Mixed Sparsity Training overview showing the warm-up, ultra-sparsification, and restoration phases."
+
+- id: mast
+  title: "Value-Based Deep Multi-Agent Reinforcement Learning with Dynamic Sparse Training"
+  url: https://www.arxiv.org/abs/2409.19391
+  authors: 'Pihe Hu\*, **Shaolong Li\***, Zhuoran Li, Ling Pan, and Longbo Huang'
+  venue: "*Annual Conference on Neural Information Processing Systems* (*NeurIPS*), 2024."
+  label: NeurIPS 2024
+  figure: /assets/images/overviews/mast.webp
+  original: /overview_figs/mast.pdf
+  alt: "Multi-agent sparse training overview with a mixing network, multi-step targets, and on-policy and off-policy replay buffers."

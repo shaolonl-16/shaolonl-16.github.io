@@ -1,0 +1,86 @@
+{
+  "overviews": {
+    "leanwam": {
+      "width": 2400,
+      "height": 900
+    },
+    "mast": {
+      "width": 2400,
+      "height": 702
+    },
+    "mst": {
+      "width": 2400,
+      "height": 1294
+    },
+    "ofp": {
+      "width": 2400,
+      "height": 1187
+    },
+    "motionmem": {
+      "width": 2228,
+      "height": 650
+    }
+  },
+  "photos": {
+    "5601795386500_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5611795386515_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5621795386527_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5631795386549_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5641795386659_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5651795386674_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5661795386705_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5671795386778_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5681795386819_.pic.jpg": {
+      "width": 960,
+      "height": 720
+    },
+    "5691795387006_.pic.jpg": {
+      "width": 960,
+      "height": 640
+    },
+    "5701795387131_.pic.jpg": {
+      "width": 960,
+      "height": 640
+    },
+    "5711795387143_.pic.jpg": {
+      "width": 960,
+      "height": 640
+    },
+    "5721795387165_.pic.jpg": {
+      "width": 960,
+      "height": 640
+    },
+    "5731795387170_.pic.jpg": {
+      "width": 960,
+      "height": 640
+    },
+    "5741795387175_.pic.jpg": {
+      "width": 960,
+      "height": 640
+    }
+  }
+}

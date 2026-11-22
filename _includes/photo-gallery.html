@@ -1,0 +1,8 @@
+<div class="photo-gallery" aria-label="Photography by Shaolong Li">
+  {% for photo in site.data.photos %}
+  {% assign dimensions = site.data.media_dimensions.photos[photo.file] %}
+  <a class="photo-tile" href="{{ '/photos/' | append: photo.file | relative_url }}" data-lightbox="photos" data-caption="{{ photo.alt | escape }}" aria-label="Enlarge photo: {{ photo.alt | escape }}">
+    <img src="{{ '/assets/images/photos/' | append: photo.file | replace: '.jpg', '.webp' | relative_url }}" alt="{{ photo.alt | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy" decoding="async">
+  </a>
+  {% endfor %}
+</div>

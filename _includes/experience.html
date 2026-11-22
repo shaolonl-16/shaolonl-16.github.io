@@ -1,0 +1,29 @@
+<section class="experience-section" aria-labelledby="experience-heading">
+  <h2 id="experience-heading">Experience &amp; Education</h2>
+  <div class="experience-grid">
+    <div class="education-column">
+      <h3 class="column-label">Education</h3>
+      {% for entry in site.data.experience.education %}
+      <article class="education-entry">
+        <p class="experience-date">{{ entry.dates }}</p>
+        <h4>{{ entry.institution }}</h4>
+        <p class="degree">{{ entry.degree }}</p>
+        <p class="experience-location">{{ entry.location }}</p>
+        {% if entry.detail %}<div class="education-detail">{{ entry.detail | markdownify }}</div>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <div class="research-column">
+      <h3 class="column-label">Research Experience</h3>
+      {% for entry in site.data.experience.research %}
+      <article class="experience-entry">
+        <p class="experience-date">{{ entry.dates }}</p>
+        <h4>{{ entry.institution }}</h4>
+        <p class="experience-role">{{ entry.role }} <span aria-hidden="true">·</span> {{ entry.location }}</p>
+        <div class="experience-summary">{{ entry.summary | markdownify }}</div>
+        <div class="experience-advisors">{{ entry.advisors | prepend: 'Advised by ' | append: '.' | markdownify }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -319,15 +319,19 @@ strong { font-weight: 600; }
   img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: contain; margin: 0; border-radius: 0; }
 }
 
-/* Center the text at rest; split the preview's extra width across both margins. */
+/* Fit each preview to the actual text width, keeping the expanded row centered. */
 @media (min-width: 1200px) and (hover: hover) and (pointer: fine) {
-  .publication { padding: 18px 0; }
-  .publication-copy { width: 100%; transition: transform 220ms ease; }
+  .publication {
+    --publication-preview-width: 320px;
+    --publication-preview-gap: 16px;
+    padding: 18px 0;
+  }
+  .publication-copy { width: max-content; max-width: 100%; transition: transform 220ms ease; }
   .publication-figure {
     position: absolute;
-    right: -172px;
+    left: calc(50% + (var(--publication-copy-width, 800px) + var(--publication-preview-gap) - var(--publication-preview-width)) / 2);
     top: 50%;
-    width: 320px;
+    width: var(--publication-preview-width);
     margin: 0;
     opacity: 0;
     pointer-events: none;
@@ -348,7 +352,7 @@ strong { font-weight: 600; }
     .overview-label { display: block; text-align: right; font-size: 0.7rem; margin-top: 5px; color: var(--academic-muted); }
   }
   .publication:hover, .publication:focus-within {
-    .publication-copy { transform: translateX(-172px); }
+    .publication-copy { transform: translateX(calc((var(--publication-row-width, 800px) - var(--publication-copy-width, 800px) - var(--publication-preview-width) - var(--publication-preview-gap)) / 2)); }
     .publication-figure { opacity: 1; pointer-events: auto; transform: translate(0, -50%); }
   }
 }

@@ -22,6 +22,29 @@
     }
   }
 
+  const publicationCopies = Array.from(document.querySelectorAll(".publication-copy"));
+  if (publicationCopies.length) {
+    // Measure the longest text line, so shorter papers do not leave a blank column.
+    const sizePublication = copy => {
+      const row = copy.closest(".publication");
+      row.style.setProperty("--publication-copy-width", `${copy.getBoundingClientRect().width}px`);
+      row.style.setProperty("--publication-row-width", `${row.clientWidth}px`);
+    };
+    const sizePublications = () => publicationCopies.forEach(sizePublication);
+    sizePublications();
+    if (document.fonts) document.fonts.ready.then(sizePublications);
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(entries => entries.forEach(entry => sizePublication(entry.target)));
+      publicationCopies.forEach(copy => observer.observe(copy));
+    } else {
+      window.addEventListener("resize", sizePublications);
+      // The theme animates font sizes at responsive breakpoints.
+      publicationCopies.forEach(copy => copy.addEventListener("transitionend", event => {
+        if (event.propertyName === "font-size") sizePublication(copy);
+      }));
+    }
+  }
+
   const links = Array.from(document.querySelectorAll("[data-lightbox]"));
   if (!links.length || typeof HTMLDialogElement === "undefined") return;
 

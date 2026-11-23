@@ -11,7 +11,7 @@ Only About displays the author profile. Publications and Misc set `author_profil
 | Publication titles, authors, links, and overview mapping | `_data/selected_publications.yml` |
 | Photo order and image descriptions | `_data/photos.yml` |
 | Typography, layout, and responsive styles | `_sass/_academic.scss` |
-| Four-item news viewport and image viewer | `assets/js/academic.js` |
+| News viewport, publication preview spacing, and image viewer | `assets/js/academic.js` |
 
 The current experience entries come from `CV_Shaolong.pdf`. The existing biography, research interests, news, publication information, and hobby paragraphs have been retained, with formatting changes. MotionMEM has no paper URL in the original page, so its title is plain text until a URL is supplied.
 
@@ -21,7 +21,7 @@ Experience uses shared rows in reverse chronological order. Each research entry 
 
 Original overviews remain in `overview_figs/`, and original photographs remain in `photos/`. The site uses compressed WebP previews for PDFs and photos. The MotionMEM overview remains SVG.
 
-Publications use compact text rows without a publication count in the introduction. The text fills the centered reading column at rest. On screens at least 1200px wide with a mouse, hovering or keyboard-focusing a row shifts its text left by 172px and reveals a 320px-wide overview on the right. This keeps the combined text and preview centered, with a 24px gap, without narrowing the title or changing row heights. Phones, touch devices, and narrower windows show an **Overview** link that opens the image viewer. The preview retains the full diagram with `object-fit: contain`. The viewer supports previous/next controls, arrow keys, and Escape. Only the photo viewer shows a link to the original file. Reduced-motion settings disable the animation.
+Publications use compact text rows without a publication count in the introduction. The text stays aligned with the centered reading column at rest. On screens at least 1200px wide with a mouse, hovering or keyboard-focusing a row shifts its text left and reveals a 320px-wide overview on the right. Each preview follows the actual width of that paper's longest text line, leaving a 16px gap and keeping the combined text and preview centered. Font loading and window resizing refresh these measurements without narrowing the title or changing row heights. Phones, touch devices, and narrower windows show an **Overview** link that opens the image viewer. The preview retains the full diagram with `object-fit: contain`. The viewer supports previous/next controls, arrow keys, and Escape. Only the photo viewer shows a link to the original file. Reduced-motion settings disable the animation.
 
 The site does not declare a custom favicon or touch icon, allowing the browser to use its default site icon.
 

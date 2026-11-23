@@ -46,6 +46,10 @@ Commit the generated `assets/images/` and `_data/media_dimensions.json` along wi
 
 ## Local preview
 
+The moon/sun button after CV switches between light and dark themes on About, Publications, and Misc. Light is the default for first-time visitors. `assets/js/theme.js` restores the `academic-theme` localStorage preference before the stylesheet loads and keeps the button, browser theme color, other tabs, and back/forward navigation in sync. If browser storage is blocked, switching still works on the current page. The button is hidden when JavaScript is unavailable.
+
+Both palettes are defined at the top of `_sass/_academic.scss`. Diagram previews and enlarged images retain a white canvas so transparent diagrams remain readable; photographs keep their original colors. Printing uses the light palette. Mouse clicks do not leave focus outlines behind, while keyboard navigation retains a visible theme-colored focus ring.
+
 With Ruby and Bundler installed:
 
 ```bash

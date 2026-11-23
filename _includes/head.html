@@ -16,6 +16,10 @@
 </script>
 
 <!-- For all browsers -->
+{% if page.body_class == 'academic-site' %}
+<!-- Restore the saved theme before styles load to avoid a light flash. -->
+<script src="{{ base_path }}/assets/js/theme.js"></script>
+{% endif %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">

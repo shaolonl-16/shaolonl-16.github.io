@@ -2,7 +2,9 @@
 
 The site keeps the existing AcademicPages/Jekyll structure and works with GitHub Pages. The main text remains in `_pages/about.md`, `_pages/publications.md`, and `_pages/misc.md`.
 
-Only About displays the author profile. Publications and Misc set `author_profile: false` and use a centered reading column (about 800px wide on desktop), with equal outer margins and no reserved sidebar column.
+Only About displays the author profile. Its `_layouts/about.html` layout keeps the profile beside the biography at the top, in normal document flow so it scrolls out of view. Below the introduction, Recent News, Publications, and Experience & Education share a centered reading column (about 800px wide on desktop), with no reserved sidebar column. Publications and Misc set `author_profile: false` and use the same centered reading width.
+
+About and the standalone Publications page both render `_includes/publications.html`, including the Scholar link, notes, all papers, and their interactive controls. Update `_data/selected_publications.yml` to change both lists together. The navigation's Publications link continues to open `/publications/`.
 
 | Content | File |
 | --- | --- |

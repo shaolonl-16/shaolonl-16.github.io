@@ -1,4 +1,5 @@
 ---
+layout: about
 permalink: /
 title: "About Me"
 excerpt: "About Me"
@@ -28,7 +29,3 @@ My research interests include:
 Previously, I worked with [Prof. Yongchao Chen](https://yongchao98.github.io/YongchaoChen/) and [Prof. Lichao Sun](https://lichao-sun.github.io/). Before that, I worked with [Prof. Huaxiu Yao](https://www.huaxiuyao.io/) at [UNC-Chapel Hill](https://www.unc.edu/). I am also grateful to [Prof. Longbo Huang](https://people.iiis.tsinghua.edu.cn/~huang/) for guiding my early research at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/#page3).
 
 **I am applying to Ph.D. programs for Fall 2027.** Feel free to reach out if you would like to chat about research!
-
-{% include news.html %}
-
-{% include experience.html %}

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div id="main" role="main" class="about-main">
+  {% include sidebar.html sticky=false %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="page__inner-wrap">
+      <header>
+        <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+      </header>
+      <div class="page__content" itemprop="text">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+
+  <div class="about-sections">
+    {% include news.html %}
+
+    <section class="publications-section" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Publications</h2>
+      {% include publications.html heading_level=3 %}
+    </section>
+
+    {% include experience.html %}
+  </div>
+</div>

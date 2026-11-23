@@ -5,9 +5,9 @@
         <span class="publication-number" aria-hidden="true">{{ include.index | prepend: '0' }}</span>
         <span class="venue-label{% if include.paper.label == 'Preprint' %} venue-label--preprint{% endif %}">{{ include.paper.label }}</span>
       </div>
-      <h2 class="publication-title">
+      <h{{ include.heading_level | default: 2 }} class="publication-title">
         {% if include.paper.url %}<a href="{{ include.paper.url }}">{{ include.paper.title }}</a>{% else %}{{ include.paper.title }}{% endif %}
-      </h2>
+      </h{{ include.heading_level | default: 2 }}>
       <div class="publication-authors">{{ include.paper.authors | markdownify }}</div>
       <div class="publication-venue">{{ include.paper.venue | markdownify }}</div>
     </div>
@@ -45,7 +45,7 @@
     </figure>
   </div>
   <div class="publication-panel" id="{{ include.paper.id }}-abstract" role="region" aria-labelledby="{{ include.paper.id }}-abstract-toggle" hidden>
-    <h3 class="publication-panel-title">Abstract</h3>
+    <h{{ include.heading_level | default: 2 | plus: 1 }} class="publication-panel-title">Abstract</h{{ include.heading_level | default: 2 | plus: 1 }}>
     {% if include.paper.abstract %}
       <div class="publication-abstract">{{ include.paper.abstract | markdownify }}</div>
     {% else %}
@@ -54,7 +54,7 @@
   </div>
   <div class="publication-panel" id="{{ include.paper.id }}-bibtex" role="region" aria-labelledby="{{ include.paper.id }}-bibtex-toggle" hidden>
     <div class="publication-panel-heading">
-      <h3 class="publication-panel-title">BibTeX</h3>
+      <h{{ include.heading_level | default: 2 | plus: 1 }} class="publication-panel-title">BibTeX</h{{ include.heading_level | default: 2 | plus: 1 }}>
       {% if include.paper.bibtex %}<button class="citation-copy" type="button" data-copy-citation="{{ include.paper.id }}-citation" aria-label="Copy BibTeX citation for {{ include.paper.title | escape }}">Copy</button>{% endif %}
     </div>
     {% if include.paper.bibtex %}

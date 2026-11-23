@@ -1,0 +1,17 @@
+<div class="publications-content">
+  {% if site.author.googlescholar %}
+    <p>You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
+  {% endif %}
+
+  <div class="publication-summary">
+    <p class="publication-note">(* stands for equal contribution. Listed in reverse chronological order.)</p>
+  </div>
+
+  <div class="publication-list">
+  {% for paper in site.data.selected_publications %}
+    {% include publication-card.html paper=paper index=forloop.index heading_level=include.heading_level %}
+  {% endfor %}
+  </div>
+
+  <noscript><style>.publication-panel[hidden] { display: block !important; } .publication-toggle, .citation-copy { display: none !important; }</style></noscript>
+</div>

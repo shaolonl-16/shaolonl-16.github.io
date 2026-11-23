@@ -101,6 +101,19 @@ strong { font-weight: 600; }
     grid-template-columns: minmax(0, 1fr);
     max-width: 864px;
   }
+  // Keep the profile beside the introduction, then use the full centered column.
+  #main.about-main {
+    row-gap: 0;
+    > .sidebar { position: static; }
+    .page__content > :last-child { margin-bottom: 0; }
+    .about-sections {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: 800px;
+      min-width: 0;
+      margin: 0 auto;
+    }
+  }
   .page, .archive, .sidebar {
     float: none;
     width: auto;
@@ -155,7 +168,8 @@ strong { font-weight: 600; }
   .page__content p, .archive > p { margin: 0 0 1.15em; }
   .page__content a { text-decoration: none; }
   .page__content a:hover, .archive > p a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .page__content h2, .archive > h2 {
+  .page__content h2, .archive > h2,
+  .about-sections > section > h2, .about-sections .section-heading h2 {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -284,8 +298,9 @@ strong { font-weight: 600; }
 .academic-site #main.publications-main { margin-top: 32px; }
 .academic-site .publications-page {
   .page__title { margin-bottom: 14px; }
-  > p { font-size: 0.9rem; margin-bottom: 10px; }
 }
+.publications-content > p { font-size: 0.9rem; margin: 0 0 10px; }
+.publications-content > p a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .publication-summary { margin-bottom: 12px; }
 .publication-note { font-size: 0.78rem; color: var(--academic-muted); margin: 0; }
 .publication { position: relative; border-top: 1px solid var(--academic-rule); padding: 12px 0; }
@@ -473,7 +488,8 @@ body.media-open { overflow: hidden; }
     .author__urls-wrapper { grid-column: 1 / -1; margin-top: 18px; }
     .author__urls { gap: 5px 18px; border-top: 1px solid var(--academic-rule); padding-top: 14px; li { font-size: 0.81rem; } }
     .page__title { margin-bottom: 22px; }
-    .page__content h2, .archive > h2 { font-size: 1.3rem; gap: 12px; }
+    .page__content h2, .archive > h2,
+    .about-sections > section > h2, .about-sections .section-heading h2 { font-size: 1.3rem; gap: 12px; }
     .page__footer footer { padding: 22px 20px; }
   }
   .section-heading { display: block; margin-bottom: 18px; h2 { margin-bottom: 7px !important; } }

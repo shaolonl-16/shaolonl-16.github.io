@@ -13,7 +13,7 @@
   text: "[**Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining**](https://arxiv.org/abs/2408.11746) accepted to **TMLR**!"
 - date: "2024-09"
   label: "Sep, 2024."
-  text: "[**A Sparse Training Framework for Multi-Agent Reinforcement Learning**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!"
+  text: "[**Value-Based Deep Multi-Agent Reinforcement Learning with Dynamic Sparse Training**](https://www.arxiv.org/abs/2409.19391) accepted to **NeurIPS 2024**!"
 - date: "2024-06"
   label: "Jun, 2024."
   text: "Graduated from Central South University with honor: awarded **Outstanding Graduate**."

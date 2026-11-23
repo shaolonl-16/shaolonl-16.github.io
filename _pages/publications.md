@@ -22,3 +22,5 @@ page_class: publications-page
   {% include publication-card.html paper=paper index=forloop.index %}
 {% endfor %}
 </div>
+
+<noscript><style>.publication-panel[hidden] { display: block !important; } .publication-toggle, .citation-copy { display: none !important; }</style></noscript>

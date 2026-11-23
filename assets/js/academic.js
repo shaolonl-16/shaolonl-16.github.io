@@ -45,6 +45,36 @@
     }
   }
 
+  document.querySelectorAll(".publication-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const row = button.closest(".publication");
+      const shouldOpen = button.getAttribute("aria-expanded") !== "true";
+      row.querySelectorAll(".publication-toggle").forEach(toggle => {
+        const expanded = toggle === button && shouldOpen;
+        toggle.setAttribute("aria-expanded", String(expanded));
+        document.getElementById(toggle.getAttribute("aria-controls")).hidden = !expanded;
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-copy-citation]").forEach(button => {
+    button.addEventListener("click", async () => {
+      const code = document.getElementById(button.dataset.copyCitation);
+      const status = button.closest(".publication-panel").querySelector(".citation-copy-status");
+      try {
+        await navigator.clipboard.writeText(code.textContent.trim());
+        status.textContent = "BibTeX copied.";
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(code);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.textContent = "Citation selected. Press Ctrl+C or ⌘C to copy.";
+      }
+    });
+  });
+
   const links = Array.from(document.querySelectorAll("[data-lightbox]"));
   if (!links.length || typeof HTMLDialogElement === "undefined") return;
 

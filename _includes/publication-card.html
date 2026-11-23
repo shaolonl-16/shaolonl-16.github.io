@@ -1,22 +1,67 @@
 <article class="publication" id="{{ include.paper.id }}">
-  <div class="publication-copy">
-    <div class="publication-topline">
-      <span class="publication-number" aria-hidden="true">{{ include.index | prepend: '0' }}</span>
-      <span class="venue-label{% if include.paper.label == 'Preprint' %} venue-label--preprint{% endif %}">{{ include.paper.label }}</span>
+  <div class="publication-header">
+    <div class="publication-copy">
+      <div class="publication-topline">
+        <span class="publication-number" aria-hidden="true">{{ include.index | prepend: '0' }}</span>
+        <span class="venue-label{% if include.paper.label == 'Preprint' %} venue-label--preprint{% endif %}">{{ include.paper.label }}</span>
+      </div>
+      <h2 class="publication-title">
+        {% if include.paper.url %}<a href="{{ include.paper.url }}">{{ include.paper.title }}</a>{% else %}{{ include.paper.title }}{% endif %}
+      </h2>
+      <div class="publication-authors">{{ include.paper.authors | markdownify }}</div>
+      <div class="publication-venue">{{ include.paper.venue | markdownify }}</div>
     </div>
-    <h2 class="publication-title">
-      {% if include.paper.url %}<a href="{{ include.paper.url }}">{{ include.paper.title }}</a>{% else %}{{ include.paper.title }}{% endif %}
-    </h2>
-    <div class="publication-authors">{{ include.paper.authors | markdownify }}</div>
-    <div class="publication-venue">{{ include.paper.venue | markdownify }}</div>
+    <div class="publication-actions" aria-label="Resources for {{ include.paper.title | escape }}">
+      {% if include.paper.webpage or include.paper.webpage_pending %}
+        {% if include.paper.webpage %}
+          <a class="publication-action" href="{{ include.paper.webpage }}" target="_blank" rel="noopener noreferrer">Webpage</a>
+        {% else %}
+          <button class="publication-action" type="button" disabled title="Project webpage coming soon">Webpage</button>
+        {% endif %}
+      {% endif %}
+      {% if include.paper.paper_pdf %}
+        <a class="publication-action" href="{{ include.paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
+      {% else %}
+        <button class="publication-action" type="button" disabled title="arXiv link coming soon">Paper</button>
+      {% endif %}
+      <button class="publication-action publication-toggle" type="button" id="{{ include.paper.id }}-abstract-toggle" data-publication-toggle="abstract" aria-expanded="false" aria-controls="{{ include.paper.id }}-abstract">Abstract</button>
+      <button class="publication-action publication-toggle" type="button" id="{{ include.paper.id }}-bibtex-toggle" data-publication-toggle="bibtex" aria-expanded="false" aria-controls="{{ include.paper.id }}-bibtex">BibTeX</button>
+      {% if include.paper.code or include.paper.code_pending %}
+        {% if include.paper.code %}
+          <a class="publication-action" href="{{ include.paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+        {% else %}
+          <button class="publication-action" type="button" disabled title="Code release coming soon">Code</button>
+        {% endif %}
+      {% endif %}
+    </div>
+    <figure class="publication-figure">
+      <a class="overview-link" href="{{ include.paper.original | relative_url }}" data-lightbox="publications" data-image="{{ include.paper.figure | relative_url }}" data-caption="{{ include.paper.title | escape }}" aria-label="Enlarge overview for {{ include.paper.title | escape }}">
+        {% assign dimensions = site.data.media_dimensions.overviews[include.paper.id] %}
+        <span class="overview-thumbnail">
+          <img src="{{ include.paper.figure | relative_url }}" alt="{{ include.paper.alt | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy" decoding="async">
+        </span>
+        <span class="overview-label">Overview <span aria-hidden="true">↗</span></span>
+      </a>
+    </figure>
   </div>
-  <figure class="publication-figure">
-    <a class="overview-link" href="{{ include.paper.original | relative_url }}" data-lightbox="publications" data-image="{{ include.paper.figure | relative_url }}" data-caption="{{ include.paper.title | escape }}" aria-label="Enlarge overview for {{ include.paper.title | escape }}">
-      {% assign dimensions = site.data.media_dimensions.overviews[include.paper.id] %}
-      <span class="overview-thumbnail">
-        <img src="{{ include.paper.figure | relative_url }}" alt="{{ include.paper.alt | escape }}" width="{{ dimensions.width }}" height="{{ dimensions.height }}" loading="lazy" decoding="async">
-      </span>
-      <span class="overview-label">Overview <span aria-hidden="true">↗</span></span>
-    </a>
-  </figure>
+  <div class="publication-panel" id="{{ include.paper.id }}-abstract" role="region" aria-labelledby="{{ include.paper.id }}-abstract-toggle" hidden>
+    <h3 class="publication-panel-title">Abstract</h3>
+    {% if include.paper.abstract %}
+      <div class="publication-abstract">{{ include.paper.abstract | markdownify }}</div>
+    {% else %}
+      <p class="publication-pending">The full abstract will be available soon.</p>
+    {% endif %}
+  </div>
+  <div class="publication-panel" id="{{ include.paper.id }}-bibtex" role="region" aria-labelledby="{{ include.paper.id }}-bibtex-toggle" hidden>
+    <div class="publication-panel-heading">
+      <h3 class="publication-panel-title">BibTeX</h3>
+      {% if include.paper.bibtex %}<button class="citation-copy" type="button" data-copy-citation="{{ include.paper.id }}-citation" aria-label="Copy BibTeX citation for {{ include.paper.title | escape }}">Copy</button>{% endif %}
+    </div>
+    {% if include.paper.bibtex %}
+      <pre class="publication-bibtex" tabindex="0"><code id="{{ include.paper.id }}-citation">{{ include.paper.bibtex | escape }}</code></pre>
+      <span class="citation-copy-status" role="status" aria-live="polite"></span>
+    {% else %}
+      <p class="publication-pending">The BibTeX citation will be available soon.</p>
+    {% endif %}
+  </div>
 </article>

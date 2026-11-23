@@ -8,6 +8,35 @@
   figure: /assets/images/overviews/leanwam.webp
   original: /overview_figs/leanwam.pdf
   alt: "LeanWAM overview: a two-stage framework learns predictive codes from a frozen video model and distills them into a lightweight action policy."
+  webpage: https://shaolonl-16.github.io/leanwam/
+  paper_pdf: null
+  code_pending: true
+  abstract: >-
+    World action models (WAMs) typically adapt large pretrained video generators to jointly predict
+    future observations and robot actions, incurring substantial training and deployment costs. However,
+    it remains unclear which future representations a policy actually needs and how compactly they can
+    be represented. Our probing study shows that complementary future representations can be compressed
+    into a few tokens while retaining most of their action-decoding performance. Motivated by this
+    finding, we introduce LeanWAM, a latent WAM that transfers video priors from a frozen video
+    generator to a lightweight policy via two-stage training. In the first stage, a Future Extractor
+    compresses observed transitions into 32 predictive tokens. These tokens condition the frozen
+    generator and are jointly shaped by action, RGB, semantic, and geometric supervision, while a
+    compact readout of the generator's hidden states supplies complementary world tokens. The second
+    stage distills both representations into the policy, which learns to predict them from current
+    observations while generating actions. With 1.4B parameters and no large-scale embodied pretraining,
+    LeanWAM outperforms strong vision-language-action (VLA) and WAM baselines on LIBERO, LIBERO-Plus,
+    and RoboTwin 2.0. It predicts an action chunk in 25.1 ms on an A100 GPU, 12.3–41.5× faster than
+    representative WAMs. These results demonstrate that compact predictive supervision can transfer
+    video priors to robust and efficient control.
+  abstract_source: https://shaolonl-16.github.io/leanwam/
+  bibtex: |-
+    @unpublished{liLeanWAM,
+      title = {{LeanWAM}: Learning Latent World Action Models from Frozen Video Models},
+      author = {Li, Shaolong and Fu, Hongze and Dai, Yinpei and Chai, Joyce},
+      note = {Preprint},
+      url = {https://shaolonl-16.github.io/leanwam/}
+    }
+  bibtex_source: Manuscript title and author list; arXiv metadata pending.
 
 - id: motionmem
   title: "MotionMEM: Self-Supervised Motion Tokens as Memory for Vision-Language-Action Policies"
@@ -17,6 +46,29 @@
   figure: /overview_figs/motionmem.svg
   original: /overview_figs/motionmem.svg
   alt: "MotionMEM overview: self-supervised motion tokens provide a compact memory for vision-language-action policies."
+  webpage_pending: true
+  paper_pdf: null
+  code_pending: true
+  abstract: >-
+    Vision-language-action (VLA) policies that need memory typically keep a sparse set of past frames.
+    Such frames record what the scene looked like at the sampled instants but not how it changed between
+    them. We ask how much extra memory a policy needs to recover what happened between frames, and find
+    that very little suffices. We present MotionMEM, which adds a narrow motion channel beside the frame
+    memory: a small self-supervised motion encoder, built on a frozen video VAE, compresses each
+    33-frame window into a single token. On RoboMME, adding at most 96 motion tokens to 512 frame tokens
+    raises average success from 30.7% to 37.3%, with only 13.9 motion tokens used per episode on
+    average. Pooling frozen video latents into one token at the same budget reaches 35.5% and falls 8 to
+    19 points behind on tasks that depend on the order of events, so the compression itself must be
+    learned. The learned tokens are also inspectable: linear probes decode task progress from the
+    policy’s hidden states more accurately than under frame-only memory.
+  abstract_source: Author-provided abstract.
+  bibtex: |-
+    @unpublished{fuMotionMEM,
+      title = {{MotionMEM}: Self-Supervised Motion Tokens as Memory for Vision-Language-Action Policies},
+      author = {Fu, Hongze and Li, Shaolong and Woo, Byeongju and Dai, Yinpei and Luo, Yunhao and Chai, Joyce and Fazeli, Nima},
+      note = {Preprint}
+    }
+  bibtex_source: Manuscript title and author list; arXiv metadata pending.
 
 - id: ofp
   title: "One-Step Flow Policy: Self-Distillation for Fast Visuomotor Policies"
@@ -27,6 +79,21 @@
   figure: /assets/images/overviews/ofp.webp
   original: /overview_figs/ofp.pdf
   alt: "One-Step Flow Policy overview showing self-consistency training and self-guided training for one-step action generation."
+  webpage: https://shaolonl-16.github.io/OFP/
+  paper_pdf: https://arxiv.org/pdf/2603.12480
+  abstract: |-
+    <p>Generative flow and diffusion models provide the continuous, multimodal action distributions needed for high-precision robotic policies. However, their reliance on iterative sampling introduces severe inference latency, degrading control frequency and harming performance in time-sensitive manipulation. To address this problem, we propose the One-Step Flow Policy (OFP), a from-scratch self-distillation framework for high-fidelity, single-step action generation without a pre-trained teacher. OFP unifies a self-consistency loss to enforce coherent transport across time intervals, and a self-guided regularization to sharpen predictions toward high-density expert modes. In addition, a warm-start mechanism leverages temporal action correlations to minimize the generative transport distance. Evaluations across 56 diverse simulated manipulation tasks demonstrate that a one-step OFP achieves state-of-the-art results, outperforming 100-step diffusion and flow policies while accelerating action generation by over 100×. We further integrate OFP into the π<sub>0.5</sub> model on RoboTwin 2.0, where one-step OFP surpasses the original 10-step policy. These results establish OFP as a practical, scalable solution for highly accurate and low-latency robot control.</p>
+  abstract_source: https://arxiv.org/abs/2603.12480
+  bibtex: |-
+    @inproceedings{li2026one,
+      title={One-step flow policy: Self-distillation for fast visuomotor policies},
+      author={Li, Shaolong and Sun, Lichao and Chen, Yongchao},
+      booktitle={European Conference on Computer Vision},
+      pages={22--39},
+      year={2026},
+      organization={Springer}
+    }
+  bibtex_source: https://shaolonl-16.github.io/OFP/
 
 - id: mst
   title: "Mixed Sparsity Training: Achieving 4× FLOP Reduction for Transformer Pretraining"
@@ -37,6 +104,31 @@
   figure: /assets/images/overviews/mst.webp
   original: /overview_figs/mst.pdf
   alt: "Mixed Sparsity Training overview showing the warm-up, ultra-sparsification, and restoration phases."
+  paper_pdf: https://arxiv.org/pdf/2408.11746
+  abstract: >-
+    Large language models (LLMs) have made significant strides in complex tasks, yet their widespread
+    adoption is impeded by substantial computational demands. With hundreds of billion parameters,
+    transformer-based LLMs necessitate months of pretraining across a high-end GPU cluster. However,
+    this paper reveals a compelling finding: transformers exhibit considerable redundancy in pretraining
+    computations, which motivates our proposed solution, Mixed Sparsity Training (MST), an efficient
+    pretraining method that can reduce about 75% of Floating Point Operations (FLOPs) while maintaining
+    performance. MST integrates dynamic sparse training (DST) with Sparsity Variation (SV) and Hybrid
+    Sparse Attention (HSA) during pretraining, involving three distinct phases: warm-up,
+    ultra-sparsification, and restoration. The warm-up phase transforms the dense model into a sparse
+    one, and the restoration phase reinstates connections. Throughout these phases, the model is trained
+    with a dynamically evolving sparse topology and an HSA mechanism to maintain performance and
+    minimize training FLOPs concurrently. Our experiment on GPT-2 showcases a FLOP reduction of 4×
+    without compromising performance.
+  abstract_source: https://arxiv.org/abs/2408.11746
+  bibtex: |-
+    @article{hu2025mixed,
+      title = {Mixed Sparsity Training: Achieving 4$\times$ {FLOP} Reduction for Transformer Pretraining},
+      author = {Hu, Pihe and Li, Shaolong and Wang, Xun and Huang, Longbo},
+      journal = {Transactions on Machine Learning Research},
+      year = {2025},
+      url = {https://openreview.net/forum?id=XosdLS7KVE}
+    }
+  bibtex_source: https://openreview.net/pdf?id=XosdLS7KVE
 
 - id: mast
   title: "Value-Based Deep Multi-Agent Reinforcement Learning with Dynamic Sparse Training"
@@ -47,3 +139,36 @@
   figure: /assets/images/overviews/mast.webp
   original: /overview_figs/mast.pdf
   alt: "Multi-agent sparse training overview with a mixing network, multi-step targets, and on-policy and off-policy replay buffers."
+  paper_pdf: https://arxiv.org/pdf/2409.19391
+  abstract: >-
+    Deep Multi-agent Reinforcement Learning (MARL) relies on neural networks with numerous parameters in
+    multi-agent scenarios, often incurring substantial computational overhead. Consequently, there is an
+    urgent need to expedite training and enable model compression in MARL. This paper proposes the
+    utilization of dynamic sparse training (DST), a technique proven effective in deep supervised
+    learning tasks, to alleviate the computational burdens in MARL training. However, a direct adoption
+    of DST fails to yield satisfactory MARL agents, leading to breakdowns in value learning within deep
+    sparse value-based MARL models. Motivated by this challenge, we introduce an innovative Multi-Agent
+    Sparse Training (MAST) framework aimed at simultaneously enhancing the reliability of learning
+    targets and the rationality of sample distribution to improve value learning in sparse models.
+    Specifically, MAST incorporates the Soft Mellowmax Operator with a hybrid TD-(λ) schema to establish
+    dependable learning targets. Additionally, it employs a dual replay buffer mechanism to enhance the
+    distribution of training samples. Building upon these aspects, MAST utilizes gradient-based topology
+    evolution to exclusively train multiple MARL agents using sparse networks. Our comprehensive
+    experimental investigation across various value-based MARL algorithms on multiple benchmarks
+    demonstrates, for the first time, significant reductions in redundancy of up to 20× in Floating
+    Point Operations (FLOPs) for both training and inference, with less than 3% performance degradation.
+  abstract_source: https://arxiv.org/abs/2409.19391
+  bibtex: |-
+    @inproceedings{NEURIPS2024_31888563,
+     author = {Hu, Pihe and Li, Shaolong and Li, Zhuoran and Pan, Ling and Huang, Longbo},
+     booktitle = {Advances in Neural Information Processing Systems},
+     doi = {10.52202/079017-0883},
+     editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+     pages = {28150--28190},
+     publisher = {Curran Associates, Inc.},
+     title = {Value-Based Deep Multi-Agent Reinforcement Learning with Dynamic Sparse Training},
+     url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/31888563b194f9bb33ce1aebc7e1551c-Paper-Conference.pdf},
+     volume = {37},
+     year = {2024}
+    }
+  bibtex_source: https://proceedings.neurips.cc/paper_files/paper/26608-/bibtex

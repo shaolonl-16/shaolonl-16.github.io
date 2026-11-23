@@ -21,9 +21,6 @@ def main():
     figures.mkdir(parents=True, exist_ok=True)
     photos.mkdir(parents=True, exist_ok=True)
 
-    with pymupdf.open(ROOT / "assets/images/favicon.svg") as icon:
-        icon[0].get_pixmap(alpha=False).save(ROOT / "assets/images/apple-touch-icon.png")
-
     for source in sorted((ROOT / "overview_figs").glob("*.pdf")):
         with pymupdf.open(source) as document:
             page = document[0]

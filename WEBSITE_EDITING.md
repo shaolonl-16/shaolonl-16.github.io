@@ -17,7 +17,11 @@ Experience uses shared rows in reverse chronological order. Each research entry 
 
 ## Images
 
-Original overviews remain in `overview_figs/`, and original photographs remain in `photos/`. The site uses compressed WebP previews for PDFs and photos. The MotionMEM overview remains SVG. Publication previews share a 3.2:1 frame and use `object-fit: contain` to preserve the full diagram without stretching or cropping. Clicking an image opens a viewer with previous/next controls, arrow-key navigation, and Escape to close. Only the photo viewer shows a link to the original file.
+Original overviews remain in `overview_figs/`, and original photographs remain in `photos/`. The site uses compressed WebP previews for PDFs and photos. The MotionMEM overview remains SVG.
+
+Publications use compact text rows. On desktop screens with a mouse, hovering or keyboard-focusing a row shifts its text left and reveals a small overview on the right. Row heights remain fixed during the transition. Phones, touch devices, and narrow windows show an **Overview** link that opens the image viewer. The preview retains the full diagram with `object-fit: contain`. The viewer supports previous/next controls, arrow keys, and Escape. Only the photo viewer shows a link to the original file. Reduced-motion settings disable the animation.
+
+The site does not declare a custom favicon or touch icon, allowing the browser to use its default site icon.
 
 To add a photo, place its JPG in `photos/`, add its filename and description to `_data/photos.yml`, then regenerate previews. To replace a paper figure, keep its filename or update the mapping in `_data/selected_publications.yml`.
 

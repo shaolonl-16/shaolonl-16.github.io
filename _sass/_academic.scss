@@ -276,44 +276,77 @@ strong { font-weight: 600; }
 .experience-summary { font-size: 0.92rem; line-height: 1.6; margin-top: 12px; }
 .experience-advisors { font-size: 0.84rem; color: var(--academic-muted); }
 
-/* Publication text stays readable, with each complete overview directly below. */
-.publication-note { font-size: 0.88rem; color: var(--academic-muted); margin-bottom: 32px !important; }
-.publication { border-top: 1px solid var(--academic-rule); padding: 27px 0 32px; }
-.publication-topline { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; }
-.publication-number { color: #81948b; font-size: 0.8rem; font-variant-numeric: tabular-nums; letter-spacing: 0.08em; }
-.venue-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; color: #28665f; background: #edf4f0; padding: 3px 10px; border-radius: 3px; }
+/* Compact publication rows; previews never change the height on hover. */
+.academic-site #main.publications-main { margin-top: 32px; }
+.academic-site .publications-page {
+  .page__title { margin-bottom: 14px; }
+  > p { font-size: 0.9rem; margin-bottom: 10px; }
+}
+.publication-summary { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 12px; }
+.publication-count { font-size: 0.82rem; font-weight: 600; color: var(--academic-accent); white-space: nowrap; }
+.publication-note { font-size: 0.78rem; color: var(--academic-muted); margin: 0; }
+.publication { position: relative; border-top: 1px solid var(--academic-rule); padding: 12px 0; }
+.publication:last-child { border-bottom: 1px solid var(--academic-rule); }
+.publication-copy { min-width: 0; }
+.publication-topline { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.publication-number { color: #81948b; font-size: 0.73rem; font-variant-numeric: tabular-nums; letter-spacing: 0.08em; }
+.venue-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em; color: #28665f; background: #edf4f0; padding: 1px 7px; border-radius: 3px; }
 .venue-label--preprint { color: #69736f; background: #f2f4f2; }
 .publication .publication-title {
-  font: 500 1.23rem/1.45 var(--academic-serif);
-  margin: 0 0 12px;
+  font: 500 1.06rem/1.4 var(--academic-serif);
+  margin: 0 0 4px;
   a { text-decoration: none; color: var(--academic-ink); }
   a:hover { color: var(--academic-accent); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 }
-.publication-authors, .publication-venue { font-size: 0.92rem; line-height: 1.6; p { margin: 0 0 7px; } }
+.publication-authors, .publication-venue { font-size: 0.84rem; line-height: 1.45; p { margin: 0 0 4px; } }
 .publication-authors strong { text-decoration: underline; text-decoration-color: #adc3b9; text-underline-offset: 3px; }
-.publication-venue { color: var(--academic-muted); font-size: 0.88rem; }
+.publication-venue { color: var(--academic-muted); font-size: 0.8rem; p { margin-bottom: 0; } }
 .publication-figure {
   display: block;
-  margin: 22px 0 0;
-  // A shared canvas keeps tall diagrams from dominating the publication list.
+  margin: 6px 0 0;
   .overview-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    aspect-ratio: 3.2 / 1;
-    padding: 17px;
-    border: 1px solid var(--academic-rule);
-    border-radius: 5px;
-    background: #fff;
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 0.78rem;
+    text-decoration: none;
     cursor: zoom-in;
   }
+  .overview-link:hover .overview-label { text-decoration: underline; text-underline-offset: 3px; }
+  .overview-thumbnail { display: none; }
   img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: contain; margin: 0; border-radius: 0; }
-  .overview-link:hover { border-color: #a2bdb1; }
-  figcaption { margin: 8px 0 0; font: 400 0.75rem/1.5 var(--academic-sans); color: var(--academic-muted); }
 }
-.image-zoom { position: absolute; bottom: 8px; right: 8px; width: 26px; height: 26px; text-align: center; line-height: 26px; background: #f0f5f1; color: var(--academic-accent); border-radius: 50%; font-size: 16px; }
+
+@media (min-width: 1000px) and (hover: hover) and (pointer: fine) {
+  .publication-copy { width: calc(100% - 280px); transition: transform 220ms ease; }
+  .publication-figure {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 260px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(18px, -50%);
+    transition: opacity 220ms ease, transform 220ms ease;
+    .overview-link { display: block; padding: 0; }
+    .overview-thumbnail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 3.2 / 1;
+      padding: 6px;
+      border: 1px solid var(--academic-rule);
+      border-radius: 4px;
+      background: #fff;
+    }
+    .overview-label { display: block; text-align: right; font-size: 0.7rem; margin-top: 5px; color: var(--academic-muted); }
+  }
+  .publication:hover, .publication:focus-within {
+    .publication-copy { transform: translateX(-24px); }
+    .publication-figure { opacity: 1; pointer-events: auto; transform: translate(0, -50%); }
+  }
+}
 
 /* Two columns retain the photos' original compositions and aspect ratios. */
 .photo-intro { color: var(--academic-muted); }
@@ -414,8 +447,9 @@ body.media-open { overflow: hidden; }
   .experience-entry::before { left: -27px; }
   .experience-row + .experience-row .education-column + .research-column .experience-entry { padding-top: 0; }
   .experience-row + .experience-row .education-column + .research-column .experience-entry::before { top: 6px; }
-  .publication .publication-title { font-size: 1.16rem; }
-  .publication-figure .overview-link { padding: 10px; }
+  .publication .publication-title { font-size: 1.05rem; }
+  .publication-authors { font-size: 0.88rem; }
+  .publication-venue { font-size: 0.84rem; }
   .photo-gallery { column-gap: 10px; }
   .photo-tile { margin-bottom: 10px; }
   .media-viewer {
@@ -434,6 +468,7 @@ body.media-open { overflow: hidden; }
 @media print {
   .academic-site #main { display: block; margin: 0; padding: 0; }
   .news-scroll { max-height: none !important; overflow: visible; }
-  .scroll-hint, .image-zoom, .media-viewer { display: none !important; }
+  .scroll-hint, .publication-figure, .media-viewer { display: none !important; }
+  .publication-copy { width: 100%; transform: none !important; }
   .publication, .experience-entry { break-inside: avoid; }
 }

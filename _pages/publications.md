@@ -4,6 +4,7 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 body_class: academic-site
+page_class: publications-page
 ---
 
 {% if site.author.googlescholar %}
@@ -12,7 +13,10 @@ body_class: academic-site
 
 {% include base_path %}
 
-<p class="publication-note">(* stands for equal contribution. Listed in reverse chronological order.)</p>
+<div class="publication-summary">
+  <span class="publication-count">{{ site.data.selected_publications | size }} publications</span>
+  <p class="publication-note">(* stands for equal contribution. Listed in reverse chronological order.)</p>
+</div>
 
 <div class="publication-list">
 {% for paper in site.data.selected_publications %}

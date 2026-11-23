@@ -4,7 +4,7 @@
   text: "New preprint [**LeanWAM**](https://shaolonl-16.github.io/leanwam/assets/paper/LeanWAM.pdf) is out, a lightweight world action model that learns from a frozen video model for fast and robust robot control."
 - date: "2026-06"
   label: "Jun, 2026."
-  text: "[**One-Step Flow Policy: Self-Distillation for Fast Visuomotor Policies**](https://arxiv.org/abs/2603.12480) accepted to **ECCV 2026**!"
+  text: "[**One-Step Flow Policy**](https://arxiv.org/abs/2603.12480) accepted to **ECCV 2026**!"
 - date: "2025-08"
   label: "Aug, 2025."
   text: "Joined **UMich** as an M.S. student in CSE!"

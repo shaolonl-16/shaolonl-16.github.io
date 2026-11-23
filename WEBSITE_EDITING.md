@@ -2,6 +2,8 @@
 
 The site keeps the existing AcademicPages/Jekyll structure and works with GitHub Pages. The main text remains in `_pages/about.md`, `_pages/publications.md`, and `_pages/misc.md`.
 
+Only About displays the author profile. Publications and Misc set `author_profile: false` and use the full content width, without a reserved sidebar column.
+
 | Content | File |
 | --- | --- |
 | News, newest first | `_data/news.yml` |
@@ -19,7 +21,7 @@ Experience uses shared rows in reverse chronological order. Each research entry 
 
 Original overviews remain in `overview_figs/`, and original photographs remain in `photos/`. The site uses compressed WebP previews for PDFs and photos. The MotionMEM overview remains SVG.
 
-Publications use compact text rows. On desktop screens with a mouse, hovering or keyboard-focusing a row shifts its text left and reveals a small overview on the right. Row heights remain fixed during the transition. Phones, touch devices, and narrow windows show an **Overview** link that opens the image viewer. The preview retains the full diagram with `object-fit: contain`. The viewer supports previous/next controls, arrow keys, and Escape. Only the photo viewer shows a link to the original file. Reduced-motion settings disable the animation.
+Publications use compact text rows without a publication count in the introduction. On desktop screens with a mouse, hovering or keyboard-focusing a row shifts its text left and reveals a 320px-wide overview on the right. Titles use the wider text column and wrap naturally. Row heights remain fixed during the transition. Phones, touch devices, and narrow windows show an **Overview** link that opens the image viewer. The preview retains the full diagram with `object-fit: contain`. The viewer supports previous/next controls, arrow keys, and Escape. Only the photo viewer shows a link to the original file. Reduced-motion settings disable the animation.
 
 The site does not declare a custom favicon or touch icon, allowing the browser to use its default site icon.
 

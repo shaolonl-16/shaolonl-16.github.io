@@ -12,7 +12,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main" class="{% if page.author_profile == false %}archive-full-width{% endif %}{% if page.page_class == 'publications-page' %} publications-main{% endif %}">
+<div id="main" role="main" class="{% if page.author_profile == false %}archive-centered{% endif %}{% if page.page_class == 'publications-page' %} publications-main{% endif %}">
   {% include sidebar.html %}
 
   <div class="archive{% if page.page_class %} {{ page.page_class }}{% endif %}">

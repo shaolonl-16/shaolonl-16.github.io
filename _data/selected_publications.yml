@@ -2,7 +2,7 @@
 - id: leanwam
   title: "LeanWAM: Learning Latent World Action Models from Frozen Video Models"
   url: https://shaolonl-16.github.io/leanwam/assets/paper/LeanWAM.pdf
-  authors: '**Shaolong Li\***, Hongze Fu\*, Yinpei Dai, and Joyce Chai'
+  authors: '**Shaolong Li\***, Hongze Fu\*, Joyce Chai, and Yinpei Dai'
   venue: "*Preprint*."
   label: Preprint
   figure: /assets/images/overviews/leanwam.webp
@@ -32,7 +32,7 @@
   bibtex: |-
     @unpublished{liLeanWAM,
       title = {{LeanWAM}: Learning Latent World Action Models from Frozen Video Models},
-      author = {Li, Shaolong and Fu, Hongze and Dai, Yinpei and Chai, Joyce},
+      author = {Li, Shaolong and Fu, Hongze and Chai, Joyce and Dai, Yinpei},
       note = {Preprint},
       url = {https://shaolonl-16.github.io/leanwam/}
     }

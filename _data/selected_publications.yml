@@ -1,7 +1,7 @@
 # Keep titles, authors and venues in sync with _pages/publications.md / the CV.
 - id: leanwam
   title: "LeanWAM: Learning Latent World Action Models from Frozen Video Models"
-  url: https://shaolonl-16.github.io/leanwam/assets/paper/LeanWAM.pdf
+  url: https://arxiv.org/abs/2611.31740
   authors: '**Shaolong Li\***, Hongze Fu\*, Joyce Chai, and Yinpei Dai'
   venue: "*Preprint*."
   label: Preprint

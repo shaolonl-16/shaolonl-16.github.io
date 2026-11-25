@@ -478,7 +478,9 @@ strong { font-weight: 600; }
     }
     .overview-label { display: block; text-align: right; font-size: 0.7rem; margin-top: 5px; color: var(--academic-muted); }
   }
-  .publication:hover, .publication:focus-within {
+  // Mouse-click focus can survive navigation and panel toggles. Only keyboard
+  // focus should keep a preview open after the pointer leaves the paper.
+  .publication:is(:hover, :has(:focus-visible)) {
     .publication-copy { transform: translateX(calc((var(--publication-row-width, 800px) - var(--publication-copy-width, 800px) - var(--publication-preview-width) - var(--publication-preview-gap)) / 2)); }
     .publication-figure { opacity: 1; pointer-events: auto; transform: translate(0, -50%); }
   }

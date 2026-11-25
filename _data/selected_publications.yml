@@ -9,7 +9,7 @@
   original: /overview_figs/leanwam.pdf
   alt: "LeanWAM overview: a two-stage framework learns predictive codes from a frozen video model and distills them into a lightweight action policy."
   webpage: https://shaolonl-16.github.io/leanwam/
-  paper_pdf: null
+  paper_pdf: https://arxiv.org/pdf/2611.31740
   code_pending: true
   abstract: >-
     World action models (WAMs) typically adapt large pretrained video generators to jointly predict

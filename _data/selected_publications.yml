@@ -10,7 +10,7 @@
   alt: "LeanWAM overview: a two-stage framework learns predictive codes from a frozen video model and distills them into a lightweight action policy."
   webpage: https://shaolonl-16.github.io/leanwam/
   paper_pdf: https://arxiv.org/pdf/2611.31740
-  code_pending: true
+  code: "https://github.com/shaolonl-16/LeanWAM-code"
   abstract: >-
     World action models (WAMs) typically adapt large pretrained video generators to jointly predict
     future observations and robot actions, incurring substantial training and deployment costs. However,
@@ -60,7 +60,7 @@
     average. Pooling frozen video latents into one token at the same budget reaches 35.5% and falls 8 to
     19 points behind on tasks that depend on the order of events, so the compression itself must be
     learned. The learned tokens are also inspectable: linear probes decode task progress from the
-    policy’s hidden states more accurately than under frame-only memory.
+    policy's hidden states more accurately than under frame-only memory.
   abstract_source: Author-provided abstract.
   bibtex: |-
     @unpublished{fuMotionMEM,

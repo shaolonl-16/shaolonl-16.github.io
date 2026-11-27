@@ -15,7 +15,7 @@ redirect_from:
 
 I am a 2nd-year M.S. student in Computer Science and Engineering at the [University of Michigan](https://umich.edu/), advised by [Prof. Joyce Y. Chai](https://web.eecs.umich.edu/~chaijy/) in the [SLED Lab](https://sled.eecs.umich.edu/). I work on embodied AI and robot learning, with a focus on vision-language-action (VLA) models, world action models (WAMs) and agentic robotics.
 
-My goal is to build robots that reason deliberately yet act in real time. Large pretrained models, from reasoning models to video generators, encode rich knowledge about the world, but they are often too slow to run inside a robot's control loop. My research asks what a policy actually needs from these models.
+My goal is to build general-purpose robots that reason deliberately yet act in real time. Large pretrained models, from reasoning models to video generators, encode rich knowledge about the world, but they are often too slow to run inside a robot's control loop. My research asks what a policy actually needs from these models.
 
 My research interests include:
 <div class="research-interests-wrapper" markdown="1">
